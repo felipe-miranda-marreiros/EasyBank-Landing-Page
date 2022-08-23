@@ -1,9 +1,10 @@
 @use '../general-styles/colors' as clrs;
 @use '../general-styles/typography' as type;
+@use '../general-styles/gradients' as grad;
 
 .header {
   nav {
-    padding: 24px;
+    padding: 1.0625rem 1.5rem;
   }
 
   &__logo {
@@ -20,9 +21,35 @@
     > li {
       display: inline;
       font-size: type.size('sm');
+      transition: color 0.2s ease-in-out;
+      position: relative;
 
       &:not(:last-child) {
         margin-right: 1.875rem;
+      }
+
+      &:hover {
+        color: clrs.primary('dark-blue');
+      }
+
+      &::before {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -30px;
+
+        content: '';
+        display: block;
+
+        height: 4px;
+        background: grad.gradient('primary');
+        transition: all 0.2s ease-in-out;
+        border-radius: 5px;
+        opacity: 0;
+      }
+
+      &:hover:before {
+        opacity: 1;
       }
     }
   }
