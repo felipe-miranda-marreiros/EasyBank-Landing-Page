@@ -1,0 +1,16 @@
+@use '../general-styles/typography' as type;
+@use '../general-styles/colors' as clrs;
+
+body {
+  color: clrs.neutral('grayish-blue');
+  font-family: 'Public Sans', sans-serif;
+  font-size: type.size('n');
+  font-weight: type.weight('light');
+  line-height: 1.3;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
