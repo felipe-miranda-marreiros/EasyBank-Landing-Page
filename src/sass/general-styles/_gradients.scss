@@ -1,0 +1,14 @@
+@use '../general-styles/colors' as clrs;
+
+$gradients: (
+  'primary':
+    linear-gradient(
+      to right,
+      clrs.primary('lime-green'),
+      clrs.primary('bright-cyan')
+    ),
+);
+
+@function gradient($grad) {
+  @return map-get($gradients, $grad);
+}
