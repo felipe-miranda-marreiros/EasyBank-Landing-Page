@@ -59,9 +59,25 @@
       width: 26px;
       height: 2px;
       background-color: clrs.primary('dark-blue');
+      transition: all 0.2s ease-in-out;
+      transform-origin: 3px 1px;
 
       &:not(:last-child) {
-        margin-bottom: 3px;
+        margin-bottom: 5px;
+      }
+    }
+
+    &.open {
+      > div:first-child {
+        transform: rotate(45deg);
+      }
+
+      > div:nth-child(2) {
+        opacity: 0;
+      }
+
+      > div:last-child {
+        transform: rotate(-45deg);
       }
     }
   }

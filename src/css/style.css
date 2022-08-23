@@ -95,9 +95,20 @@ img {
   width: 26px;
   height: 2px;
   background-color: hsl(233deg, 26%, 24%);
+  transition: all 0.2s ease-in-out;
+  transform-origin: 3px 1px;
 }
 .header__menu > div:not(:last-child) {
-  margin-bottom: 3px;
+  margin-bottom: 5px;
+}
+.header__menu.open > div:first-child {
+  transform: rotate(45deg);
+}
+.header__menu.open > div:nth-child(2) {
+  opacity: 0;
+}
+.header__menu.open > div:last-child {
+  transform: rotate(-45deg);
 }
 .header__cta {
   color: hsl(0deg, 0%, 100%);
