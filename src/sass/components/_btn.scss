@@ -1,0 +1,10 @@
+@use '../general-styles/gradients' as grad;
+@use '../general-styles/colors' as clrs;
+@use '../general-styles/typography' as type;
+
+.btn {
+  padding: 0.875rem 2.1875rem;
+  border-radius: 50px;
+  cursor: pointer;
+  background: grad.gradient('primary');
+}
