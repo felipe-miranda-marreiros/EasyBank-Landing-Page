@@ -1,0 +1,22 @@
+html {
+  font-size: 100%;
+}
+
+$font-s-s: (
+  'n': 1.125rem,
+  'sm': 0.875rem,
+);
+
+@function size($fs-value) {
+  @return map-get($font-s-s, $fs-value);
+}
+
+$font-w: (
+  'light': 300,
+  'regular': 400,
+  'bold': 700,
+);
+
+@function weight($fw-value) {
+  @return map-get($font-w, $fw-value);
+}
