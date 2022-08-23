@@ -1,0 +1,47 @@
+@use '../general-styles/colors' as clrs;
+@use '../general-styles/typography' as type;
+
+.header {
+  nav {
+    padding: 24px;
+  }
+
+  &__logo {
+    margin-top: 6px;
+
+    img {
+      width: 8.8125rem;
+      height: 1.375rem;
+      object-fit: none;
+    }
+  }
+
+  &__links {
+    > li {
+      display: inline;
+      font-size: type.size('sm');
+
+      &:not(:last-child) {
+        margin-right: 1.875rem;
+      }
+    }
+  }
+
+  &__menu {
+    > div {
+      width: 26px;
+      height: 2px;
+      background-color: clrs.primary('dark-blue');
+
+      &:not(:last-child) {
+        margin-bottom: 3px;
+      }
+    }
+  }
+
+  &__cta {
+    color: clrs.neutral('white');
+    font-weight: type.weight('bold');
+    font-size: type.size('sm');
+  }
+}
