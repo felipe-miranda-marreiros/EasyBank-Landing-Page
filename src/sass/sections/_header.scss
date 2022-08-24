@@ -3,6 +3,22 @@
 @use '../general-styles/gradients' as grad;
 
 .header {
+  &.open {
+    .header__menu {
+      > div:first-child {
+        transform: rotate(45deg);
+      }
+
+      > div:nth-child(2) {
+        opacity: 0;
+      }
+
+      > div:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
   nav {
     padding: 1.0625rem 1.5rem;
   }
@@ -66,20 +82,6 @@
         margin-bottom: 5px;
       }
     }
-
-    &.open {
-      > div:first-child {
-        transform: rotate(45deg);
-      }
-
-      > div:nth-child(2) {
-        opacity: 0;
-      }
-
-      > div:last-child {
-        transform: rotate(-45deg);
-      }
-    }
   }
 
   &__cta {
@@ -87,4 +89,16 @@
     font-weight: type.weight('bold');
     font-size: type.size('sm');
   }
+}
+
+.overlay {
+  opacity: 0;
+
+  position: fixed;
+  top: 3.75rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-image: grad.gradient('overlay-fallback');
 }
