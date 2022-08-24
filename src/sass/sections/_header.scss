@@ -4,7 +4,7 @@
 
 .header {
   &.open {
-    .header__menu {
+    .header__toggle {
       > div:first-child {
         transform: rotate(45deg);
       }
@@ -70,7 +70,7 @@
     }
   }
 
-  &__menu {
+  &__toggle {
     > div {
       width: 26px;
       height: 2px;
