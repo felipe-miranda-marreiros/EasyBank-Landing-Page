@@ -7,6 +7,7 @@ $gradients: (
       clrs.primary('lime-green'),
       clrs.primary('bright-cyan')
     ),
+  'overlay-fallback': linear-gradient(clrs.primary('dark-blue'), transparent),
 );
 
 @function gradient($grad) {
