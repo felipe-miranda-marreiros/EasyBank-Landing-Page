@@ -7,6 +7,10 @@ body {
   font-size: type.size('n');
   font-weight: type.weight('light');
   line-height: 1.3;
+
+  &.noscroll {
+    overflow: hidden;
+  }
 }
 
 img {

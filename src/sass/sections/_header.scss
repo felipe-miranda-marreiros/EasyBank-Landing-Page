@@ -3,6 +3,8 @@
 @use '../general-styles/gradients' as grad;
 
 .header {
+  position: relative;
+
   &.open {
     .header__toggle {
       > div:first-child {
@@ -20,7 +22,7 @@
   }
 
   nav {
-    padding: 1.0625rem 1.5rem;
+    padding-block: 1.0625rem;
   }
 
   &__logo {
@@ -30,6 +32,23 @@
       width: 8.8125rem;
       height: 1.375rem;
       object-fit: none;
+    }
+  }
+
+  &__menu {
+    background-color: clrs.neutral('white');
+    border-radius: 5px;
+
+    position: absolute;
+    padding: 1.625rem;
+    margin: 1.5rem 1.5rem 0;
+    text-align: center;
+    width: calc(100% - 3rem);
+    font-weight: type.weight('regular');
+
+    > li {
+      color: clrs.primary('dark-blue');
+      padding: 0.625rem;
     }
   }
 
