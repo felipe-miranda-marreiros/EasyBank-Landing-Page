@@ -3,10 +3,14 @@
 @use '../general-styles/typography' as type;
 
 .btn {
-  padding: 0.875rem 2.1875rem;
-  border-radius: 50px;
-  cursor: pointer;
   background: grad.gradient('primary');
+  color: clrs.neutral('white');
+  font-weight: type.weight('bold');
+  font-size: type.size('sm');
+  border-radius: 50px;
+
+  padding: 0.875rem 2.1875rem;
+  cursor: pointer;
   transition: opacity 0.2s ease-in-out;
 
   &:hover {
