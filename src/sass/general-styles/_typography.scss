@@ -5,6 +5,8 @@ html {
 $font-s-s: (
   'n': 1.125rem,
   'sm': 0.875rem,
+  'lg': 1.25rem,
+  'xlg': 3.25rem,
 );
 
 @function size($fs-value) {
