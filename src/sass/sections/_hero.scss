@@ -83,22 +83,5 @@
       order: 1;
       text-align: left;
     }
-
-    h1 {
-      font-size: 2.3125rem;
-      font-weight: type.weight('light');
-      color: clrs.primary('dark-blue');
-      line-height: 1.15;
-      margin-bottom: 1.5rem;
-
-      @include breakpoint-up(large) {
-        font-size: type.size('xlg');
-      }
-    }
-
-    p {
-      line-height: 1.5;
-      margin-bottom: 2.25rem;
-    }
   }
 }
