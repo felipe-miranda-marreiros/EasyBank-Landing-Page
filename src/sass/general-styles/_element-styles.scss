@@ -2,13 +2,51 @@
 @use '../general-styles/colors' as clrs;
 @use '../mixins/breakpoints' as *;
 
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: type.weight('light');
+  color: clrs.primary('dark-blue');
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: 2.3125rem;
+  margin-bottom: 1.5rem;
+
+  @include breakpoint-up(large) {
+    font-size: type.size('xlg');
+  }
+}
+
+h2 {
+  font-size: 1.875rem;
+  margin-bottom: 1.5625rem;
+
+  @include breakpoint-up(large) {
+    font-size: 2.25rem;
+    margin-bottom: 2.25rem;
+  }
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 2.25rem;
+}
+
 body {
   color: clrs.neutral('grayish-blue');
   font-family: 'Public Sans', sans-serif;
   font-size: type.size('sm');
   font-weight: type.weight('light');
   line-height: 1.3;
-  overflow: hidden;
+  overflow-x: hidden;
 
   @include breakpoint-up(large) {
     font-size: type.size('n');
@@ -17,10 +55,4 @@ body {
   &.noscroll {
     overflow: hidden;
   }
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
