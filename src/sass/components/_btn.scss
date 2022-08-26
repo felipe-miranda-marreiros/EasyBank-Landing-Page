@@ -3,7 +3,7 @@
 @use '../general-styles/typography' as type;
 
 .btn {
-  background: grad.gradient('primary');
+  background-image: grad.gradient('primary');
   color: clrs.neutral('white');
   font-weight: type.weight('bold');
   font-size: type.size('sm');
@@ -12,8 +12,22 @@
   padding: 0.875rem 2.1875rem;
   cursor: pointer;
   transition: opacity 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
 
-  &:hover {
-    opacity: 0.75;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 225, 0.25);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  &:hover::before {
+    opacity: 1;
   }
 }
