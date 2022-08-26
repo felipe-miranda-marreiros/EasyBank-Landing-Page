@@ -1,0 +1,65 @@
+@use '../general-styles/colors' as clrs;
+@use '../general-styles/typography' as type;
+@use '../mixins/breakpoints' as *;
+
+.articles {
+  background-color: clrs.neutral('very-light-gray');
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.875rem;
+
+    @include breakpoint-up(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__item {
+    background-color: clrs.neutral('white');
+    border-radius: 0.3125rem;
+    overflow: hidden;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.04);
+  }
+
+  &__image {
+    height: 12.5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__text {
+    background-color: clrs.neutral('white');
+    padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+
+    @include breakpoint-up(medium) {
+      padding: 1.875rem 1.5625rem;
+    }
+  }
+
+  &__author {
+    font-size: 0.625rem;
+    margin-bottom: 0.75rem;
+  }
+
+  &__title {
+    color: clrs.primary('dark-blue');
+    font-size: 1.0625rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  &__description {
+    font-size: 0.8125rem;
+  }
+}
