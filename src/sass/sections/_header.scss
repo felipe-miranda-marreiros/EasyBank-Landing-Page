@@ -45,6 +45,7 @@
     text-align: center;
     width: calc(100% - 3rem);
     font-weight: type.weight('regular');
+    z-index: 9999;
 
     > li {
       color: clrs.primary('dark-blue');
@@ -114,4 +115,5 @@
   left: 0;
 
   background-image: grad.gradient('overlay-fallback');
+  z-index: 999;
 }
